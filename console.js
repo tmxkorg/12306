@@ -42,7 +42,7 @@ function qiangpiao()
 				n++;
 			}
 			j++;if (j==url.length) j=0;
-			if (n==1000) $("#tmxk").val($("#tmxk").val("");
+			if (n==10) $("#tmxk").val("");
 		}
 		,parseInt(parseFloat(shezhi.split("#")[5])*1000));
 }
