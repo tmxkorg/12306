@@ -38,11 +38,11 @@ function qiangpiao()
 			for(var i=0;i<s.data.length;i++)
 			if (s.data[i].queryLeftNewDTO[url[j].split("#")[1]]!="无" &&s.data[i].queryLeftNewDTO[url[j].split("#")[1]]!="--")
 			{
-				$("#tmxk").val($("#tmxk").val()+s.data[i].queryLeftNewDTO.from_station_name+"--到-->"+s.data[i].queryLeftNewDTO.to_station_name+"的"+url[j].split("#")[2]+"有："+(s.data[i].queryLeftNewDTO[url[j].split("#")[1]]=='有'?'多':'1')+"张\n");
+				$("#tmxk").val(s.data[i].queryLeftNewDTO.from_station_name+"--到-->"+s.data[i].queryLeftNewDTO.to_station_name+"的"+url[j].split("#")[2]+"有："+(s.data[i].queryLeftNewDTO[url[j].split("#")[1]]=='有'?'多':'1')+"张\n"+$("#tmxk").val());
 				n++;
 			}
 			j++;if (j==url.length) j=0;
-			if (n>100) $("#tmxk").val("");
+			if (n>100) {$("#tmxk").val("");n=0;}
 		}
 		,parseInt(parseFloat(shezhi.split("#")[5])*1000));
 }
