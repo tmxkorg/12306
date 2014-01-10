@@ -28,7 +28,7 @@ for(var i=0;i<xuanze.length;i++)
 qp=new XMLHttpRequest();
 function qiangpiao()
 {
-		var j=0;
+		var j=n=0;
 		$('<div style="height:230px;padding:20px;"><textarea id="tmxk" style="width:100%;height:100%; background:url(http://tmxk.org/12306/h.png) no-repeat center;color:#53868B;; font-size:16px;padding:8px;"></textarea></div>').insertBefore($(".header"));		
 		setInterval(function()
 		{
@@ -39,8 +39,10 @@ function qiangpiao()
 			if (s.data[i].queryLeftNewDTO[url[j].split("#")[1]]!="无" &&s.data[i].queryLeftNewDTO[url[j].split("#")[1]]!="--")
 			{
 				$("#tmxk").val($("#tmxk").val()+s.data[i].queryLeftNewDTO.from_station_name+"--到-->"+s.data[i].queryLeftNewDTO.to_station_name+"的"+url[j].split("#")[2]+"有："+(s.data[i].queryLeftNewDTO[url[j].split("#")[1]]=='有'?'多':'1')+"张\n");
+				n++;
 			}
 			j++;if (j==url.length) j=0;
+			if (n==1000) $("#tmxk").val($("#tmxk").val("");
 		}
 		,parseInt(parseFloat(shezhi.split("#")[5])*1000));
 }
