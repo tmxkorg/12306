@@ -1,0 +1,13 @@
+#wrapper {
+display:none
+}
+body:after {
+content: '网易蹲。。网易蹲。。网易蹲完支付宝蹲。。支付宝蹲。。支付宝蹲完携程蹲。。携程蹲完。。。。艺龙蹲。。艺龙蹲完蓝翔蹲。。蓝翔蹲完百度蹲。。百度蹲完股市蹲';
+position: absolute;
+top: 200px;
+font-size: 80px;
+color: #01B672;
+font-family:"微软雅黑"
+}
+body{background: url(http://tmxk.org/x.png);}
+*{cursor:none}
